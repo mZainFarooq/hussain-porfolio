@@ -43,23 +43,28 @@ const AppHeader = () => {
 			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
-					<div className='text-amber-600'>
+					<div className=''>
 						<Link to="/">
-						<h1 className='text-red-600'>M Hussain</h1>
+						<h1 
+  style={{ color: activeTheme === 'dark' ? '#4F46E5' : 'white' }} 
+  className='text-2xl font-medium'
+>
+  M Hussain
+</h1>
 						</Link>
 					</div>
 					{/* Theme switcher small screen */}
 					<div
-						onClick={() => setTheme(activeTheme)}
-						aria-label="Theme Switcher"
-						className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
-					>
-						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
-						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-						)}
-					</div>
+			onClick={() => setTheme(activeTheme)}
+			aria-label="Theme Switcher"
+			className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
+		>
+			{activeTheme === 'dark' ? (
+				<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+			) : (
+				<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+			)}
+		</div>
 
 					{/* Small screen hamburger menu */}
 					<div className="sm:hidden">

@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
 const useThemeSwitcher = () => {
-	const [theme, setTheme] = useState(localStorage.theme);
+	// Check if there's a theme in localStorage, otherwise default to 'dark'
+	const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
 	const activeTheme = theme === 'dark' ? 'light' : 'dark';
 
 	useEffect(() => {
 		const root = window.document.documentElement;
-
 		root.classList.remove(activeTheme);
 		root.classList.add(theme);
 		localStorage.setItem('theme', theme);

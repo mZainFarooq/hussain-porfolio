@@ -97,6 +97,7 @@ const ProjectsGrid = () => {
 				{selectProject
 					? selectProjectsByCategory.map((project) => (
 							<ProjectSingle
+							link={project.link}
 								title={project.title}
 								category={project.category}
 								image={project.img}
@@ -106,6 +107,7 @@ const ProjectsGrid = () => {
 					: searchProject
 					? searchProjectsByTitle.map((project) => (
 							<ProjectSingle
+							link={project.link}
 								title={project.title}
 								category={project.category}
 								image={project.img}
