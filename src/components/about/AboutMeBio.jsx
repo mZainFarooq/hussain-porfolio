@@ -1,25 +1,18 @@
 import profileImage from '../../images/profile.jpeg';
-import { useContext } from 'react';
-import AboutMeContext from '../../context/AboutMeContext';
 
 const AboutMeBio = () => {
-	const { aboutMe } = useContext(AboutMeContext);
-
 	return (
 		<div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
 			<div className="w-full sm:w-1/4 mb-7 sm:mb-0">
 				<img src={profileImage} className="rounded-lg w-96" alt="" />
 			</div>
 
-			<div className="font-general-regular w-full sm:w-3/4 text-left">
-				{aboutMe.map((bio) => (
-					<p
-						className="mb-4 text-ternary-dark dark:text-ternary-light text-lg"
-						key={bio.id}
-					>
-						{bio.bio}
-					</p>
-				))}
+			<div className="font-general-regular w-full sm:w-3/4 text-left text-ternary-dark dark:text-ternary-light">
+				<h1 className='text-2xl mb-4 '>M Hussain | Software Engineer & MERN Stack Developer</h1>
+				<p className='text-lg'>
+				Welcome to my portfolio! I'm M Hussain, a dedicated software engineer specializing in MERN stack development. With a proven track record of building dynamic and efficient web applications, including projects like <a 
+			 style={{color:'red', textDecoration:'underline'}}	className="text-blue-500 underline" href="https://sendmea.io/" target='blank'>sendmea.io,</a> I excel in creating seamless user experiences. My skill set includes advanced proficiency in Next.js and Firebase, enabling me to deliver high-quality products by leveraging modern technologies. Explore my portfolio to see how I can help bring your ideas to life.
+				</p>
 			</div>
 		</div>
 	);

@@ -1,18 +1,10 @@
 import React from 'react';
 
-const FormInput = ({
-	inputLabel,
-	labelFor,
-	inputType,
-	inputId,
-	inputName,
-	placeholderText,
-	ariaLabelName,
-}) => {
+const FormInput = React.forwardRef(({ inputLabel, labelFor, inputType, inputId, inputName, placeholderText, ariaLabelName, ...rest }, ref) => {
 	return (
-		<div className="font-general-regular mb-4">
+		<div className="mb-4">
 			<label
-				className="block text-lg text-primary-dark dark:text-primary-light mb-1"
+				className="block text-lg text-primary-dark dark:text-primary-light mb-2"
 				htmlFor={labelFor}
 			>
 				{inputLabel}
@@ -24,10 +16,11 @@ const FormInput = ({
 				name={inputName}
 				placeholder={placeholderText}
 				aria-label={ariaLabelName}
-				required
+				ref={ref}
+				{...rest}
 			/>
 		</div>
 	);
-};
+});
 
 export default FormInput;

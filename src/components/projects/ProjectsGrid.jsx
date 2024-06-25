@@ -4,7 +4,7 @@ import ProjectSingle from './ProjectSingle';
 import { ProjectsContext } from '../../context/ProjectsContext';
 import ProjectsFilter from './ProjectsFilter';
 
-const ProjectsGrid = () => {
+const ProjectsGrid = ({number}) => {
 	const {
 		projects,
 		searchProject,
@@ -14,6 +14,15 @@ const ProjectsGrid = () => {
 		setSelectProject,
 		selectProjectsByCategory,
 	} = useContext(ProjectsContext);
+	// Determine the projects to display based on filters
+	let displayedProjects;
+	if (selectProject) {
+		displayedProjects = selectProjectsByCategory;
+	} else if (searchProject) {
+		displayedProjects = searchProjectsByTitle;
+	} else {
+		displayedProjects = projects.slice(0, number); // Default to showing only 6 projects
+	}
 
 	return (
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
@@ -95,7 +104,7 @@ const ProjectsGrid = () => {
 
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
 				{selectProject
-					? selectProjectsByCategory.map((project) => (
+					? displayedProjects.map((project) => (
 							<ProjectSingle
 							link={project.link}
 								title={project.title}
@@ -105,7 +114,7 @@ const ProjectsGrid = () => {
 							/>
 					  ))
 					: searchProject
-					? searchProjectsByTitle.map((project) => (
+					?  displayedProjects.map((project) => (
 							<ProjectSingle
 							link={project.link}
 								title={project.title}
@@ -114,7 +123,7 @@ const ProjectsGrid = () => {
 								key={project.id}
 							/>
 					  ))
-					: projects.map((project) => (
+					:  displayedProjects.map((project) => (
 							<ProjectSingle
 							link={project.link}
 								title={project.title}

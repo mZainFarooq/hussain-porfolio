@@ -12,6 +12,7 @@
     "react": "^18.1.0",
     "react-countup": "^6.1.1",
     "react-dom": "^18.1.0",
+    "react-hook-form": "^7.52.0",
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
@@ -20,12 +21,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "yarn run build:css && yarn run react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "postcss src/css/tailwind.css -o src/css/main.css",
-    "deploy": "react-scripts build && firebase deploy --only hosting"
+    "build:css": "postcss src/css/tailwind.css -o src/css/main.c",
+    "deploy": "react-scripts --openssl-legacy-provider build && firebase deploy --only hosting"
   },
   "eslintConfig": {
     "extends": [

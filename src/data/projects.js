@@ -4,7 +4,7 @@ import SI from '../assets/SI.png';
 import sendmea from '../assets/sendmea.png';
 import andymation from '../assets/andymation(1).png';
 import tax1 from '../assets/tax1.png';
-import ai from '../assets/ai2.png';
+import ai from '../assets/ai4.jpeg';
 import ai3 from '../assets/ai3.png';
 import lead1 from '../assets/lead1.png';
 
@@ -12,7 +12,7 @@ import lead1 from '../assets/lead1.png';
 export const projectsData = [
 	{
 		id: 1,
-		title: 'Send Mea',
+		title: 'SendMea',
 		category: 'Web Application',
 		img: sendmea,
 		link:'https://sendmea.io/',
@@ -40,14 +40,14 @@ export const projectsData = [
 	},
 	{
 		id: 5,
-		title: 'Tax',
+		title: 'ARR Tax App',
 		category: 'Web Application',
 		img: tax1,
 		link:'https://tax.americanrefundrecovery.com/'
 	},
 	{
 		id: 6,
-		title: 'Ai',
+		title: 'Idea Flow Ai',
 		category: 'Web Application',
 		img: ai,
 		link:'https://ai-dev-tools-b1258.web.app/'

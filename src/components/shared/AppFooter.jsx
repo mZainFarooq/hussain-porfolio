@@ -5,7 +5,6 @@ import {
 	FiInstagram,
 } from 'react-icons/fi';
 import { TbBrandFiverr } from "react-icons/tb";
-import AppFooterCopyright from './AppFooterCopyright';
 const socialLinks = [
 	{
 		id: 1,
@@ -59,8 +58,7 @@ const AppFooter = () => {
 						))}
 					</ul>
 				</div>
-
-				<AppFooterCopyright />
+				{/* <AppFooterCopyright /> */}
 			</div>
 		</div>
 	);
