@@ -22,12 +22,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "yarn run build:css && yarn run react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/css/tailwind.css -o src/css/main.c",
-    "deploy": "react-scripts build && firebase deploy --only hosting"
+    "deploy": "react-scripts --openssl-legacy-provider build && firebase deploy --only hosting"
   },
   "eslintConfig": {
     "extends": [
@@ -48,7 +48,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.24.7",
     "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@babel/preset-env": "^7.24.7",
     "@tailwindcss/forms": "^0.5.2",
     "@testing-library/dom": "^8.20.0",
     "autoprefixer": "^10.4.7",
@@ -56,6 +58,9 @@
     "tailwindcss": "^3.0.24"
   },
   "babel": {
-    "plugins": ["@babel/plugin-proposal-optional-chaining"]
+    "presets": ["@babel/preset-env"],
+    "plugins": [
+      "@babel/plugin-proposal-optional-chaining"
+    ]
   }
 }
