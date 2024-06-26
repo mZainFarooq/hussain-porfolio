@@ -1,5 +1,5 @@
 {
-  "name": "react-tailwindcss-portfolio",
+  "name": "m-hussain-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,12 +22,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
     "build": "yarn run build:css && yarn run react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/css/tailwind.css -o src/css/main.c",
-    "deploy": "react-scripts --openssl-legacy-provider build && firebase deploy --only hosting"
+    "deploy": "react-scripts build && firebase deploy --only hosting"
   },
   "eslintConfig": {
     "extends": [
