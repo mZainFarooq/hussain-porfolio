@@ -1,4 +1,4 @@
-import profileImage from '../../images/profile.jpeg';
+import profileImage from '../../images/img-1.jpeg';
 
 const AboutMeBio = () => {
 	return (

@@ -1,16 +1,36 @@
 import { useForm } from 'react-hook-form';
 import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
-
+// import emailjs from '@emailjs/browser'
 const ContactForm = () => {
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
 	  } = useForm()
-	  const onSubmit=(data)=>{
+	
+	  const onSubmit =  (data) => {
 		console.log(data)
-	  }
+		// const templateParams = {
+		//   to_name: 'Muhammad Hussain',
+		//   from_name: data.name,
+		//   from_email: data.email,
+		//   message: data.message,
+		//   project_type:data.subject
+		// };
+	
+		// try {
+		//   const response = await emailjs.send(
+		// 	process.env.REACT_APP_SERVICE_ID,
+		// 	process.env.REACT_APP_TEMPLATE_ID,
+		// 	templateParams,
+		// 	process.env.REACT_APP_PUBLIC_KEY
+		//   );
+		//   console.log('SUCCESS!', response.status, response.text);
+		// } catch (error) {
+		//   console.error('FAILED...', error);
+		// }
+	  };
 	return (
 		<div className="w-full lg:w-1/2">
 			<div className="leading-loose">
