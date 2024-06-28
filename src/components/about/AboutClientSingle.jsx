@@ -1,11 +1,7 @@
 const AboutClientSingle = ({ title, image }) => {
 	return (
 		<>
-			<img
-				src={image}
-				className="w-64 py-5 px-10 border bg-secondary-light border-ternary-light dark:border-ternary-dark shadow-sm rounded-lg mb-8 cursor-pointer"
-				alt={title}
-			/>
+		<div style={{backgroundColor:'#ebe7e6',height:"160px"}} className="p-4 flex justify-center items-center rounded-md" title={title} >{image}</div>
 		</>
 	);
 };
