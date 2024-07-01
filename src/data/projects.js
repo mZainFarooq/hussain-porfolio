@@ -2,11 +2,11 @@
 import CM from '../assets/CM.png';
 import SI from '../assets/SI.png';
 import sendmea from '../assets/sendmea.png';
-import andymation from '../assets/andymation(1).png';
-import tax1 from '../assets/tax1.png';
-import ai from '../assets/ai4.jpeg';
-import ai3 from '../assets/ai3.png';
-import lead1 from '../assets/lead1.png';
+import andymation from '../images/andymation.png';
+import tax1 from '../images/arr.png';
+import ai from '../images/ideaflow.png';
+import ai3 from '../images/aistudyflow.png';
+import lead1 from '../images/leadmagnet.png';
 
 
 export const projectsData = [
